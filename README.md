@@ -26,7 +26,8 @@
 ---
 
 ## Aperçu Portfolio
-![alt text](<Capture d’écran du 2026-05-17 22-25-38.png>)
+
+![alt text](<memory_portfolio/Capture d’écran du 2026-05-17 22-25-38.png>)
 
 ---
 
@@ -45,7 +46,7 @@
 
 1. **Clone le dépôt**
 ```bash
-git clone git@github.com:celiacml/celia_portfolio.git
+git clone git@GitHub.com:celiacml/celia_portfolio.git
 ``` 
 
 2. **Installer les dépendances**
@@ -75,22 +76,44 @@ Ouvrez votre navigateur à l'adresse : `http://localhost:5173/`
 
 6. **Déployer le portfolio**
 
+* **Étape 1** -> Configurer vite.config.js -> base: "/celia_portfolio/",
+
+* **Étape 2** -> Installer le package gh-pages -> `npm install gh-pages --save-dev`
+
+* **Étape 3** -> Ajouter dans package.json -> dans scripts -> `{ "deploy": "gh-pages -d dist" }`
+
+* **Étape 4** -> Build le projet -> `npm run build`
+
+* **Étape 5** -> Déployer le projet -> `npm run deploy`
+
+* **Étape 6** -> Push les modifications -> `git add . puis git commit -m "deploy" puis git push`
+
+* **Étape 7** -> Sur GitHub -> Settings -> Pages -> sélectionner gh-pages & /(root)
+
+**Pour chaque modification du site -> refaire :**
+```bash
+npm run build
+npm run deploy
+git push
+```
+**⚠️ Toujours lancer les commandes à la racine du projet (là où il y a package.json) et pas dans src**
+
 ---
 
 ## Gestion de projet 
 - **Git** - Version control
 - **GitHub** - Hébergement et collaboration
-<!-- - **GitHub Pages** - Déployer le portfolio -->
+- **GitHub Pages** - Déployer le portfolio
 
 ---
 
 ## Liens utiles
 
-- **Dépôt en ligne** : ``````
-- **Repo Github** : ``````
+- **Dépôt en ligne** : ```https://celiacml.GitHub.io/celia_portfolio/```
+- **Repo GitHub** : ```git@GitHub.com:celiacml/celia_portfolio.git```
 - **Portfolio en local** : ```http://localhost:5173/```
 
 ---
 
 ## Auteur 
-Ce projet a été réalisé par Célia MARIE-LOUISE.
+Ce projet a été réalisé par Apiqueen ^-^
